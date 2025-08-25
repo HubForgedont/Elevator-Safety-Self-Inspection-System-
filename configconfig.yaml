@@ -1,0 +1,58 @@
+# Elevator Safety Self-Inspection System Configuration
+
+# Hardware configuration
+hardware:
+  type: "traction"
+  manufacturer: "ElevatorCorp"
+  model: "SafeRide 3000"
+  installation_date: "2020-01-15"
+  last_maintenance: "2023-06-10"
+  capacity_kg: 1000
+  floors_serviced: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  
+  # Sensor configuration
+  sensors:
+    motor_temperature:
+      type: "temperature"
+      location: "motor"
+      unit: "celsius"
+    
+    control_temperature:
+      type: "temperature"
+      location: "control_panel"
+      unit: "celsius"
+    
+    motor_vibration:
+      type: "vibration"
+      location: "motor"
+      unit: "mm/s"
+    
+    elevator_speed:
+      type: "speed"
+      unit: "m/s"
+    
+    cabin_weight:
+      type: "weight"
+      capacity: 1000
+      unit: "kg"
+    
+    door_safety:
+      type: "door_sensor"
+      location: "main_door"
+    
+    emergency_button:
+      type: "emergency_button"
+      location: "cabin"
+
+# Inspection configuration
+inspection:
+  # Checklist items for inspection
+  checklist_items:
+    - id: "motor_temp"
+      name: "Motor Temperature"
+      type: "sensor"
+      sensor_id: "motor_temperature"
+      category: "mechanical"
+      criticality: "high"
+      thresholds:
+        min_warning: 50

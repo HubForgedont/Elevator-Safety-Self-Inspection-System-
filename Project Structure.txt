@@ -1,0 +1,28 @@
+elevator-safety-inspector/
+├── src/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── inspection/
+│   │   ├── __init__.py
+│   │   ├── checklist.py
+│   │   ├── report_generator.py
+│   │   └── safety_analyzer.py
+│   ├── hardware/
+│   │   ├── __init__.py
+│   │   ├── sensors.py
+│   │   └── elevator_interface.py
+│   └── utils/
+│       ├── __init__.py
+│       ├── config.py
+│       ├── database.py
+│       └── logger.py
+├── tests/
+│   ├── __init__.py
+│   ├── test_checklist.py
+│   ├── test_safety_analyzer.py
+│   └── test_sensors.py
+├── config/
+│   └── config.yaml
+├── requirements.txt
+├── setup.py
+└── README.md
